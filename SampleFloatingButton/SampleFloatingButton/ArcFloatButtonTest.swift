@@ -8,7 +8,7 @@
 import JTFloatingButton
 import SwiftUI
 
-struct FloatActionViewTest: View {
+struct ArcFloatButtonTest: View {
     
     private let actions = [
         FloatingAction(image: Image(systemName: "tray.full.fill"), tint: .red, background: .white) {

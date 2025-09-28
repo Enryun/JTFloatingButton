@@ -11,7 +11,7 @@ import SwiftUI
 struct SampleFloatingButtonApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ArcFloatButtonTest()
         }
     }
 }
