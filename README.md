@@ -9,9 +9,9 @@
 3. [Requirements](#requirements)
 4. [Installation](#installation)
 5. [Usage](#usage)
-    - [ArcFloatingButton](#arcfloatingbutton)
-    - [ExpandFloatButton](#expandfloatbutton)
-7. [Author](#author)
+- [ArcFloatingButton](#arcfloatingbutton)
+- [ExpandFloatButton](#expandfloatbutton)
+6. [Author](#author)
 
 ## Overview
 
