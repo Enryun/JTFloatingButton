@@ -1,0 +1,15 @@
+{
+  "originHash" : "12cbb56acb43bafc89517dda27489c69cc79850810c38bd46ca2eb18feb0a215",
+  "pins" : [
+    {
+      "identity" : "jtfloatingbutton",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Enryun/JTFloatingButton",
+      "state" : {
+        "branch" : "main",
+        "revision" : "7423093b9c6a569fc6bd3d53d44e90339e28b165"
+      }
+    }
+  ],
+  "version" : 3
+}
