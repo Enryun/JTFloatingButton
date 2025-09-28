@@ -398,6 +398,130 @@ This component enhances the user interface by seamlessly integrating multiple ac
 
 This component is ideal for interfaces that require quick access to multiple actions without cluttering the UI.
 
+## ExpandFloatButton
+
+A SwiftUI view component that displays a floating action button with expandable action buttons.
+
+```swift
+ExpandFloatButton(alignment: .leading) {
+    
+} label: { isExpanded in
+    
+}
+```
+
+Parameters:
+- `buttonSize`: The size of the floating button and each action button.
+- `alignment`: The direction in which the action buttons will expand from the main button. (e.g., leading, trailing, top, bottom).
+- `spacing`: The space between the expanded action buttons.
+- `shape`: The shape of each action button, conforming to the `Shape` protocol.
+- `actions`: An array of [FloatingAction](#floatingaction) objects defining the actions for the expanded buttons.
+- `label`: A view builder that generates the content displayed on the expandable floating button.
+
+`ExpandFloatButton` offers a dynamic way to present multiple action buttons from a main floating button. It supports expansion in specified directions and can adapt the shape of the action buttons.
+
+Define actions data using [FloatingAction](#floatingaction):
+
+```swift
+private let actions: [FloatingAction] = [
+    FloatingAction(image: Image(systemName: "tray.full.fill"), tint: .red) {
+        print("Tray")
+    },
+    FloatingAction(image: Image(systemName: "lasso.badge.sparkles"), tint: .orange) {
+        print("Spark")
+    },
+    FloatingAction(image: Image(systemName: "square.and.arrow.up.fill"), tint: .yellow) {
+        print("Share")
+    },
+    FloatingAction(image: Image(systemName: "heart.fill"), tint: .green) {
+        print("Heart")
+    },
+    FloatingAction(image: Image(systemName: "paperplane"), tint: .cyan) {
+        print("Plane")
+    }
+]
+```
+
+**Leading**:
+
+```swift
+ScrollView(.vertical) { ... }
+.overlay(alignment: .bottomLeading) {
+    ExpandFloatButton(alignment: .leading, actions: actions, shape: .rect(cornerRadius: 8)) { isExpanded in
+        Image(systemName: "plus")
+            .font(.title3.bold())
+            .foregroundStyle(.white)
+            .rotationEffect(.init(degrees: isExpanded ? 45 : 0))
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .background(.black, in: .rect(cornerRadius: 8))
+    }
+    .padding()
+}
+```
+
+https://github.com/user-attachments/assets/27aac4f9-f219-4732-bf0b-848ae4ebf562
+
+**Trailing**:
+
+```swift
+ScrollView(.vertical) { ... }
+.overlay(alignment: .bottomTrailing) {
+    ExpandFloatButton(alignment: .trailing, actions: actions) { isExpanded in
+        Image(systemName: "plus")
+            .font(.title3.bold())
+            .foregroundStyle(.white)
+            .rotationEffect(.init(degrees: isExpanded ? 45 : 0))
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .background(.black, in: .circle)
+    }
+    .padding()
+}
+```
+
+https://github.com/user-attachments/assets/9e723ab3-eeed-4da1-8e2d-6b7f16bb483f
+
+**Top**:
+
+```swift
+ScrollView(.vertical) { ... }
+.overlay(alignment: .topTrailing) {
+    ExpandFloatButton(alignment: .top, actions: actions) { isExpanded in
+        Image(systemName: "plus")
+            .font(.title3.bold())
+            .foregroundStyle(.white)
+            .rotationEffect(.init(degrees: isExpanded ? 45 : 0))
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .background(.black, in: .circle)
+    }
+    .padding()
+}
+```
+
+https://github.com/user-attachments/assets/5b53e2e9-5d0a-4f34-b79a-b2e8907dd335
+
+**Bottom**:
+
+```swift
+ScrollView(.vertical) { ... }
+.overlay(alignment: .bottomTrailing) {
+    ExpandFloatButton(alignment: .bottom, actions: actions) { isExpanded in
+        Image(systemName: "plus")
+            .font(.title3.bold())
+            .foregroundStyle(.white)
+            .rotationEffect(.init(degrees: isExpanded ? 45 : 0))
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .background(.black, in: .circle)
+    }
+    .padding()
+}
+```
+
+https://github.com/user-attachments/assets/ddd4a195-e9a6-48e4-aebe-e4b2be86d593
+
+The `ExpandFloatButton` efficiently enhances the user interface by integrating multiple action options into a single floating button. This design not only saves valuable screen space but also adds a sophisticated aesthetic element to the user interface. 
+
+It is particularly beneficial in applications where quick access to multiple functions is necessary without cluttering the screen, offering an intuitive and streamlined user experience.
+
 
 ## Author
 
