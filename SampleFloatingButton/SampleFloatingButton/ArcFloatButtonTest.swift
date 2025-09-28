@@ -270,7 +270,7 @@ struct ArcFloatButtonTest: View {
 }
 
 #Preview {
-    FloatActionViewTest()
+    ArcFloatButtonTest()
 }
 
 
