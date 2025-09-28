@@ -9,7 +9,9 @@
 3. [Requirements](#requirements)
 4. [Installation](#installation)
 5. [Usage](#usage)
-6. [Author](#author)
+    - [ArcFloatingButton](#arcfloatingbutton)
+    - [ExpandFloatButton](#expandfloatbutton)
+7. [Author](#author)
 
 ## Overview
 
@@ -38,7 +40,7 @@ For more details on using Swift Package Manager, visit [Apple's Swift Package Ma
 
 ## Usage
 
-#### FloatingAction
+## FloatingAction
 
 Represents a customizable floating action button with identifiable properties. Used for `ArcFloatingButton` and `ExpandFloatingButton`.
 
@@ -58,7 +60,7 @@ Parameters:
 
 `FloatingAction` configures a button that can be prominently displayed over content, commonly used for actions such as creating new items or triggering specific functions. This struct allows customization of the button's icon, font, colors, and action.
 
-### ArcFloatingButton
+## ArcFloatingButton
 
 A customizable floating action button component that arcs around a main button, revealing multiple action buttons.
 
