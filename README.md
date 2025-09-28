@@ -58,22 +58,6 @@ Parameters:
 
 `FloatingAction` configures a button that can be prominently displayed over content, commonly used for actions such as creating new items or triggering specific functions. This struct allows customization of the button's icon, font, colors, and action.
 
-Define actions data using [FloatingAction](#floatingaction):
-
-```swift
-private let actions = [
-    FloatingAction(image: Image(systemName: "tray.full.fill"), tint: .red, background: .white) {
-        print("Tray")
-    },
-    FloatingAction(image: Image(systemName: "lasso.badge.sparkles"), tint: .red, background: .white) {
-        print("Spark")
-    },
-    FloatingAction(image: Image(systemName: "square.and.arrow.up.fill"), tint: .red, background: .white) {
-        print("Share")
-    }
-]
-```
-
 ### ArcFloatingButton
 
 A customizable floating action button component that arcs around a main button, revealing multiple action buttons.
@@ -95,6 +79,22 @@ Parameters:
 - `label`: A view builder that generates the content displayed on the expandable floating button.
 
 `ArcFloatingButton` allows for a radial or semi-circular placement of action buttons that emerge from behind the main button. It supports various alignments and can adapt to custom shapes for each action button.
+
+Define actions data using [FloatingAction](#floatingaction):
+
+```swift
+private let actions = [
+    FloatingAction(image: Image(systemName: "tray.full.fill"), tint: .red, background: .white) {
+        print("Tray")
+    },
+    FloatingAction(image: Image(systemName: "lasso.badge.sparkles"), tint: .red, background: .white) {
+        print("Spark")
+    },
+    FloatingAction(image: Image(systemName: "square.and.arrow.up.fill"), tint: .red, background: .white) {
+        print("Share")
+    }
+]
+```
 
 **Top Leading**:
 
